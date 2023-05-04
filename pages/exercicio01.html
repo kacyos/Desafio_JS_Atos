@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/exercicio01.css" />
+    <title>Exercício 01</title>
+  </head>
+  <body id="container">
+    <h1>Exercício 01</h1>
+    <p>Clique em um dos botões e altere a cor de fundo</p>
+    <div class="group-button">
+      <button id="vermelho">Vermelho</button>
+      <button id="verde">Verde</button>
+    </div>
+    <div class="group-button">
+      <button id="azul">Azul</button>
+      <button id="amarelo">Amarelo</button>
+    </div>
+  </body>
+  <script>
+    const btnVermelho = document.getElementById("vermelho");
+    const btnVerde = document.getElementById("verde");
+    const btnAzul = document.getElementById("azul");
+    const btnAmarelo = document.getElementById("amarelo");
+
+    const body = document.getElementById("container");
+
+    btnVermelho.addEventListener("click", () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "red";
+    });
+
+    btnVerde.addEventListener("click", () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "green";
+    });
+
+    btnAzul.addEventListener("click", () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "blue";
+    });
+
+    btnAmarelo.addEventListener("click", () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "yellow";
+    });
+  </script>
+</html>

@@ -1,0 +1,35 @@
+#container {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.group-button {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  color: rgb(75, 75, 75);
+}
+
+#vermelho {
+  background-color: rgb(254, 111, 111);
+}
+
+#verde {
+  background-color: rgb(111, 254, 111);
+}
+
+#azul {
+  background-color: rgb(111, 111, 254);
+}
+
+#amarelo {
+  background-color: rgb(254, 254, 111);
+}
