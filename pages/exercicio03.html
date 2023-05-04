@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <title>Exercício 02</title>
+  </head>
+  <body id="container">
+    <h2>Exercício 03</h1>
+    <p>Selecione uma cor</p>
+    <div class="group-button">
+        <label for="ciano">
+            Ciano
+            <input id="ciano" type="radio" value="cyan" name="cor"/>
+        </label>
+        <label for="vermelho">
+            Vermelho
+        <input id="vermelho" type="radio" value="red" name="cor"/>
+    </label>
+        <input type="radio" value="Laranja" name="cor"/>
+        <input type="radio" value="Azul" name="cor"/>
+    </div>  
+  </body>
+  <script>
+    /**************** Exercício 01  ********************/
+    const btnCiano = document.getElementById("ciano");
+    const btnMagenta = document.getElementById("magenta");
+    const btnLaranja = document.getElementById("laranja");
+    const btnVioleta = document.getElementById("violeta");
+
+    const body = document.getElementById("container");
+
+    btnCiano.onchange = () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "cyan";
+    };
+
+    
+    btnMagenta.onmouseover = () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "magenta";
+    };
+
+    btnLaranja.onmouseover = () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "orange";
+    };
+
+    btnVioleta.onmouseover = () => {
+      body.style.transition = "all 1s";
+      body.style.backgroundColor = "violet";
+    };
+  </script>
+</html>

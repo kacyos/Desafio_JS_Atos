@@ -12,10 +12,17 @@
   gap: 20px;
 }
 
-button {
+button,
+a {
   width: 100px;
   height: 40px;
   color: rgb(75, 75, 75);
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #vermelho {
@@ -32,4 +39,20 @@ button {
 
 #amarelo {
   background-color: rgb(254, 254, 111);
+}
+
+#ciano {
+  background-color: rgb(111, 254, 254);
+}
+
+#magenta {
+  background-color: rgb(254, 111, 254);
+}
+
+#laranja {
+  background-color: rgb(254, 165, 111);
+}
+
+#violeta {
+  background-color: rgb(165, 111, 254);
 }
