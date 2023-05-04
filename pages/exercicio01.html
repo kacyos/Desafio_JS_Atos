@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/exercicio01.css" />
+    <link rel="stylesheet" href="../css/css01.css" />
     <title>Exercício 01</title>
   </head>
   <body id="container">    
@@ -27,24 +27,22 @@
     const btnAmarelo = document.getElementById("amarelo");
 
     const body = document.getElementById("container");
+    
+    body.style.transition = "all 1s";
 
     btnVermelho.addEventListener("click", () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = "red";
     });
 
     btnVerde.addEventListener("click", () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = "green";
     });
 
     btnAzul.addEventListener("click", () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = "blue";
     });
 
     btnAmarelo.addEventListener("click", () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = "yellow";
     });
   </script>

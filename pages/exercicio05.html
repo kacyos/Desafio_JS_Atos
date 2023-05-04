@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/css02.css">
+    <title>Exercício 05</title>
+  </head>
+  <div>
+  <body >
+    <section class="container border">
+      <h1>Exercício 05</h1>
+    <div>
+      <label for="check01">Teste 01</label>
+      <input id="check01" type="checkbox" value="teste01" />
+    </div>
+    <div>
+      <label for="check02">Teste 02</label>
+      <input id="check02" type="checkbox" value="teste02" />
+    </div>
+    <div>
+      <label for="check03">Teste 03</label>
+      <input id="check03" type="checkbox" value="teste03" />
+    </div>
+    <div>
+      <label for="check04">Teste 04</label>
+      <input id="check04" type="checkbox" value="teste04" />
+    </div>
+    <button id="button" disabled>Continuar</button>    
+  </section>
+  <script>
+    const button = document.getElementById("button");
+    const allCheckBox = document.querySelectorAll("input[type=checkbox]");
+    
+document.onchange = () => {
+  let checkeds = 0;
+  
+   allCheckBox.forEach((checkbox) => {
+     if(checkbox.checked){
+       checkeds++;
+     }
+   });
+
+   console.log(checkeds);
+
+  if(checkeds >= 2){
+      button.disabled = false;
+    } else {
+      button.disabled = true;
+    }
+}
+   
+  </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/css02.css" />
+    <title>Exercício 04</title>
+  </head>
+  <body>
+    <section class="container">
+      <h1>Exercício 04</h1>
+      <p>
+        Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros
+        commodo tempor.
+      </p>
+      <button id="button">Exibir</button>
+    </section>
+    <script>
+      const button = document.getElementById("button");
+
+      button.addEventListener("click", () => {
+        const p = document.querySelector("p");
+        const display = p.style.display;
+
+        if (display === "none") {
+          p.style.display = "block";
+          button.textContent = "Ocultar";
+        } else {
+          p.style.display = "none";
+          button.textContent = "Exibir";
+        }
+      });
+    </script>
+  </body>
+</html>

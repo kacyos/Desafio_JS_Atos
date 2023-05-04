@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/exercicio01.css" />
+    <link rel="stylesheet" href="../css/css01.css" />
     <title>Exercício 02</title>
   </head>
   <body id="container">
     <h2>Exercício 02</h1>
     <p>Passe o cursor em um dos botões e altere a cor de fundo</p>
     <div class="group-button">
-      <a id="ciano">Ciano</a>
+      <a href="#" id="ciano">Ciano</a>
       <a id="magenta">Magenta</a>
     </div>
     <div class="group-button">
@@ -29,25 +29,22 @@
     const btnVioleta = document.getElementById("violeta");
 
     const body = document.getElementById("container");
+    body.style.transition = "all 1s";
 
-    btnCiano.onmouseover = () => {
-      body.style.transition = "all 1s";
+    btnCiano.onmouseover = () => {      
       body.style.backgroundColor = "cyan";
     };
 
     
     btnMagenta.onmouseover = () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = "magenta";
     };
 
     btnLaranja.onmouseover = () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = "orange";
     };
 
     btnVioleta.onmouseover = () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = "violet";
     };
   </script>

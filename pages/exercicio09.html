@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/css03.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container">
+      <form>
+        <div>
+          <label for="login">Login</label>
+          <input type="text" name="login" id="login" required />
+        </div>
+        <div>
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" required />
+        </div>
+        <div>
+          <label for="confirmar-senha">Confirmar Senha</label>
+          <input
+            type="password"
+            name="confirmar-senha"
+            id="confirmar-senha"
+            required
+          />
+        </div>
+        <button id="button" type="submit">Enviar</button>
+      </form>
+      <div id="message-error">
+        <p id="login-error"></p>
+        <p id="password-error"></p>
+        <p id="password-length"></p>
+        <p id="password-confirm-error"></p>
+        <p id="password-does-not-match"></p>
+      </div>
+    </section>
+
+    <script>
+      const form = document.querySelector("form");
+      const login = document.getElementById("login");
+      const senha = document.getElementById("senha");
+      const confirmarSenha = document.getElementById("confirmar-senha");
+      const button = document.getElementById("button");
+
+      const messageError = document.getElementById("message-error");
+      const loginError = document.getElementById("login-error");
+      const passwordError = document.getElementById("password-error");
+      const passwordConfirmError = document.getElementById(
+        "password-confirm-error"
+      );
+      const passwordDoesNotMatch = document.getElementById(
+        "password-does-not-match"
+      );
+      const passwordLength = document.getElementById("password-length");
+
+      function exibirMessageError() {
+        messageError.style.display = "block";
+      }
+
+      login.onblur = () => {
+        if (!!login.value) {
+          loginError.innerText = "";
+          hasError = false;
+          hasError ? "" : (messageError.style.display = "none");
+          hasError ? "" : (button.disabled = false);
+          hasError ? "" : (button.style.cursor = "pointer");
+        } else {
+          messageError.style.display = "block";
+          loginError.innerText = "Login deve ser preenchido";
+          hasError = true;
+          button.disabled = true;
+          button.style.cursor = "not-allowed";
+        }
+      };
+
+      senha.onblur = () => {
+        if (!!senha.value) {
+          passwordError.innerText = "";
+          passwordError.display = "none";
+        } else {
+          messageError.style.display = "block";
+          passwordError.innerText = "Senha deve ser preenchida";
+        }
+
+        if (senha.value.length >= 6 && senha.value.length <= 10) {
+          passwordLength.innerText = "";
+          passwordLength.display = "none";
+        } else {
+          messageError.style.display = "block";
+          passwordLength.innerText = "Senha deve ter entre 6 e 10 caracteres";
+          hasError = true;
+          button.disabled = true;
+          button.style.cursor = "not-allowed";
+        }
+      };
+
+      confirmarSenha.onblur = () => {
+        if (confirmarSenha.value === senha.value && !!confirmarSenha.value) {
+          passwordConfirmError.innerText = "";
+          hasError ? null : (hasError = false);
+          hasError ? "" : (messageError.style.display = "none");
+        } else {
+          messageError.style.display = "block";
+          passwordConfirmError.innerText = "As senhas não coincidem";
+          hasError = true;
+          button.disabled = true;
+          button.style.cursor = "not-allowed";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="/css/exercicio01.css">
-    <title>Exercício 02</title>
+    <link rel="stylesheet" href="/css/css01.css">
+    <title>Exercício 03</title>
   </head>
   <body id="container">
     <h2>Exercício 03</h1>
@@ -39,24 +39,22 @@
 
     const body = document.getElementById("container");
 
+    body.style.transition = "all 1s";
+
     radioCiano.onchange = () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = radioCiano.value;
     };
 
     
     radioVermelho.onchange = () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = radioVermelho.value; 
     };
 
     radioLaranja.onchange = () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = radioLaranja.value;
     };
 
     radioAzul.onchange = () => {
-      body.style.transition = "all 1s";
       body.style.backgroundColor = radioAzul.value;
     };
   </script>

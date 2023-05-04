@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/css02.css" />
+    <title>exercicio08</title>
+  </head>
+  <body>
+    <section class="container">
+      <h1>Exercício 08</h1>
+      <div id="box">
+        <span id="font"></span>
+        <p id="text">
+          Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan
+          disputationi eu sit. Vide electram sadipscing et per. Per aumento de
+          cachacis, eu reclamis. Paisis, filhis, espiritis santis. Cevadis im
+          ampola pa arma uma pindureta.
+        </p>
+
+        <div id="stack">
+          <div>
+            <div>
+              <h3>Alterar cor da fonte</h3>
+              <button id="font-preta">Preto</button>
+              <button id="font-branca">Banco</button>
+            </div>
+
+            <div>
+              <h3>Tamanho da Fonte</h3>
+              <button id="aumentar">+</button>
+              <button id="diminuir">-</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h3>Alterar cor de fundo</h3>
+              <button id="fundo-preto">Preto</button>
+              <button id="fundo-branco">Banco</button>
+            </div>
+            <div>
+              <h3>Maiúsculo ou Minúsculo</h3>
+              <button id="upper">upper</button>
+              <button id="lower">lower</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const fontPreta = document.getElementById("font-preta");
+      const fontBranca = document.getElementById("font-branca");
+      const fundoPreto = document.getElementById("fundo-preto");
+      const fundoBranco = document.getElementById("fundo-branco");
+      const aumentarFonte = document.getElementById("aumentar");
+      const diminuirFonte = document.getElementById("diminuir");
+      const upper = document.getElementById("upper");
+      const lower = document.getElementById("lower");
+      const text = document.getElementById("text");
+      const font = document.getElementById("font");
+
+      let fontSize = window.getComputedStyle(text).fontSize;
+      font.innerText = `font-size: ${fontSize}`;
+
+      text.style.transition = "all .8s ease-in-out";
+
+      fontPreta.addEventListener("click", () => {
+        text.style.color = "black";
+      });
+
+      fontBranca.addEventListener("click", () => {
+        text.style.color = "white";
+      });
+
+      fundoPreto.addEventListener("click", () => {
+        text.style.backgroundColor = "black";
+      });
+
+      fundoBranco.addEventListener("click", () => {
+        text.style.backgroundColor = "white";
+      });
+
+      aumentarFonte.addEventListener("click", () => {
+        const fontSize = window.getComputedStyle(text).fontSize;
+        const tamanhoDaFonte = parseInt(fontSize.slice(0, -2));
+        const novaFonte = tamanhoDaFonte + 1;
+        text.style.fontSize = `${novaFonte}px`;
+        font.innerText = `font-size: ${novaFonte}px`;
+      });
+
+      diminuirFonte.addEventListener("click", () => {
+        const fontSize = window.getComputedStyle(text).fontSize;
+        const tamanhoDaFonte = parseInt(fontSize.slice(0, -2));
+        const novaFonte = tamanhoDaFonte - 1;
+        text.style.fontSize = `${novaFonte}px`;
+        font.innerText = `font-size: ${novaFonte}px`;
+      });
+
+      upper.addEventListener("click", () => {
+        text.style.textTransform = "uppercase";
+      });
+
+      lower.addEventListener("click", () => {
+        text.style.textTransform = "lowercase";
+      });
+    </script>
+  </body>
+</html>
