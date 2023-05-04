@@ -19,10 +19,12 @@ a {
   color: rgb(75, 75, 75);
 }
 
-a {
+a,
+label {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2px;
 }
 
 #vermelho {

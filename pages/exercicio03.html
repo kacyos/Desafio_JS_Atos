@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="/css/exercicio01.css">
     <title>Exercício 02</title>
   </head>
   <body id="container">
@@ -19,38 +20,44 @@
             Vermelho
         <input id="vermelho" type="radio" value="red" name="cor"/>
     </label>
-        <input type="radio" value="Laranja" name="cor"/>
-        <input type="radio" value="Azul" name="cor"/>
+    <label for="laranja">
+      Laranja
+        <input id="laranja" type="radio" value="orange" name="cor"/>
+      </label>
+      <label for="azul">
+        Azul
+        <input id="azul" type="radio" value="blue" name="cor"/>
+      </label>
     </div>  
   </body>
   <script>
     /**************** Exercício 01  ********************/
-    const btnCiano = document.getElementById("ciano");
-    const btnMagenta = document.getElementById("magenta");
-    const btnLaranja = document.getElementById("laranja");
-    const btnVioleta = document.getElementById("violeta");
+    const radioCiano = document.getElementById("ciano");
+    const radioVermelho = document.getElementById("vermelho");
+    const radioLaranja = document.getElementById("laranja");
+    const radioAzul = document.getElementById("azul");
 
     const body = document.getElementById("container");
 
-    btnCiano.onchange = () => {
+    radioCiano.onchange = () => {
       body.style.transition = "all 1s";
-      body.style.backgroundColor = "cyan";
+      body.style.backgroundColor = radioCiano.value;
     };
 
     
-    btnMagenta.onmouseover = () => {
+    radioVermelho.onchange = () => {
       body.style.transition = "all 1s";
-      body.style.backgroundColor = "magenta";
+      body.style.backgroundColor = radioVermelho.value; 
     };
 
-    btnLaranja.onmouseover = () => {
+    radioLaranja.onchange = () => {
       body.style.transition = "all 1s";
-      body.style.backgroundColor = "orange";
+      body.style.backgroundColor = radioLaranja.value;
     };
 
-    btnVioleta.onmouseover = () => {
+    radioAzul.onchange = () => {
       body.style.transition = "all 1s";
-      body.style.backgroundColor = "violet";
+      body.style.backgroundColor = radioAzul.value;
     };
   </script>
 </html>
