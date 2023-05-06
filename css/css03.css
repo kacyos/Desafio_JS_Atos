@@ -13,10 +13,10 @@ form {
   justify-content: center;
   gap: 10px;
   width: 500px;
-  background: #d4d4d4;
+  background: #6b6b6b20;
   padding: 30px;
   border-radius: 4px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0 rgba(54, 0, 92, 0.2);
 }
 
 form > div {
@@ -54,9 +54,13 @@ form > button {
   font-weight: 600;
 }
 
+form > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
 #message-error {
-  display: none;
-  padding: 8px;
+  display: block;
   border-radius: 4px;
   margin-top: 10px;
   height: fit-content;
@@ -64,4 +68,10 @@ form > button {
   background: rgb(250, 103, 103);
   color: #272727;
   align-items: center;
+}
+
+#message-error > div > p {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
 }
