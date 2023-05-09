@@ -77,7 +77,7 @@ function validateConfirmPassword() {
 
 function validate() {
   inputs.forEach((input) => {
-    input.addEventListener("blur", () => {
+    input.addEventListener("change", () => {
       const elementsError = [];
 
       elementsError.push(validateLogin());

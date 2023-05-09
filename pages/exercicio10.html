@@ -4,56 +4,91 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/js/exercicio10.js"></script>
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/css03.css" />
+    <link rel="stylesheet" href="/css/css04.css" />
     <title>Document</title>
   </head>
   <body>
     <section class="container">
+      <h1>Exercicio 10</h1>
+      <a href="/">Voltar</a>
       <form>
-        <div>
-          <label for="login">Login</label>
-          <input type="text" name="login" id="login" required />
+        <div class="input-group">
+          <div>
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
         </div>
-        <div>
-          <label for="senha">Senha</label>
-          <input type="password" name="senha" id="senha" required />
+
+        <div id="group-radio">
+          <div>
+            <label for="fisica">Física</label>
+            <input type="radio" name="person" id="fisica" required />
+          </div>
+          <div>
+            <label for="juridica">Jurídica</label>
+            <input type="radio" name="person" id="juridica" required />
+          </div>
         </div>
-        <div>
-          <label for="confirmar-senha">Confirmar Senha</label>
-          <input
-            type="password"
-            name="confirmar-senha"
-            id="confirmar-senha"
-            required
-          />
+
+        <div class="input-group">
+          <div>
+            <label for="cpf-cnpj">CPF</label>
+            <input
+              disabled
+              type="text"
+              name="cpf"
+              id="cpf"
+              maxlength="14"
+              required
+            />
+          </div>
+          <div>
+            <label for="cpf-cnpj">CNPJ</label>
+            <input
+              disabled
+              type="text"
+              name="cnpj"
+              maxlength="16"
+              id="cnpj"
+              required
+            />
+          </div>
         </div>
-        <button type="submit">Enviar</button>
+
+        <div class="input-group">
+          <div>
+            <label for="dateOfBirth">Data de Nascimento</label>
+            <input
+              disabled
+              type="date"
+              name="date-of-birth"
+              id="date-of-birth"
+              required
+            />
+          </div>
+          <div>
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" maxlength="9" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <div>
+            <label for="phone">Endereço</label>
+            <input type="text" name="endereco" id="endereco" required />
+          </div>
+          <div>
+            <label for="phone">Telefone</label>
+            <input type="tel" name="phone" id="phone" maxlength="15" required />
+          </div>
+        </div>
       </form>
       <div id="message-error"></div>
     </section>
-
-    <script>
-      const form = document.querySelector("form");
-      const login = document.querySelector("#login");
-      const senha = document.querySelector("#senha");
-      const confirmarSenha = document.querySelector("#confirmar-senha");
-
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        if (login.value.length === 0) {
-          alert("Login deve ser preenchido");
-          return;
-        }
-
-        if (senha.value !== confirmarSenha.value) {
-          alert("Senhas não conferem");
-          return;
-        }
-
-        alert("Formulário enviado com sucesso");
-      });
-    </script>
   </body>
 </html>

@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 80%;
+  width: 800px;
+  background: #6b6b6b20;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px 0 rgba(54, 0, 92, 0.2);
+}
+
+.input-group {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#group-radio {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group input {
+  border: 1px solid #5a85fb;
+  border-radius: 4px;
+  height: 30px;
+  outline: transparent;
+  padding: 4px;
+}
+
+.input-group input:focus {
+  transition: ease-out 0.4s;
+  outline: 1px solid #5a85fb;
+  box-shadow: 0 0 7px 0 rgba(90, 133, 251, 0.5);
+}
+
+.input-group input:disabled {
+  background: #6b6b6b20;
+  border: 1px solid #6b6b6b20;
+}
+
+.input-group .error {
+  border: 1px solid #ed4988;
+}
